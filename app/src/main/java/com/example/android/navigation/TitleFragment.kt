@@ -51,5 +51,6 @@ class TitleFragment : Fragment() {
                 || super.onOptionsItemSelected(item)
     }
     companion object {
+    }
 /**
  * Use this factory method to create a new instance of

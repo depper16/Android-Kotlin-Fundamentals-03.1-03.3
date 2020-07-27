@@ -29,12 +29,13 @@ class TitleFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
-                R.layout.fragment_title,container,false)
-        binding.playButton.setOnClickListener { view : View ->
+                R.layout.fragment_title, container, false)
+        binding.playButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
         setHasOptionsMenu(true)
@@ -45,12 +46,12 @@ class TitleFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.options_menu, menu)
     }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item!!,
-                view!!.findNavController())
-                || super.onOptionsItemSelected(item)
+        return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController())
+                ||super.onOptionsItemSelected(item)
     }
-    companion object {
-    }
+}
 /**
  * Use this factory method to create a new instance of
